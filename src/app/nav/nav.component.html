@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <button mat-button routerLink="/">Message Board</button>
+    <button mat-button routerLink="/messages">Messages</button>
+    <span style="flex: 1 1 auto"></span>
+    <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/login">Login</button>
+    <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/register">Register</button>
+    <button *ngIf="auth.isAuthenticated" mat-button routerLink="/user">Welcome {{auth.name}}</button>
+    <button *ngIf="auth.isAuthenticated" mat-button (click)="auth.logout()">Logout</button>
+    <!-- <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row> -->
+  </mat-toolbar>
+  

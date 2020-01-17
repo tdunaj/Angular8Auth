@@ -1,0 +1,10 @@
+<mat-card class="card">
+    <mat-form-field>
+        <input [(ngModel)]="model.firstName"  matInput placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field>
+          <input [(ngModel)]="model.lastName"  matInput placeholder="Last Name">
+        </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="saveUser(model)">Save Changes</button>
+  </mat-card>
